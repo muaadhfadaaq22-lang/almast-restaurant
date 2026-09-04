@@ -34,10 +34,11 @@ export function Footer() {
           <div>
             <h4 className="font-medium text-white mb-4">Quick Links</h4>
             <ul className="space-y-2 text-sm text-secondary-foreground/80">
-              <li><Link href="#menu" className="hover:text-white transition">Menu</Link></li>
-              <li><Link href="#specials" className="hover:text-white transition">Specials</Link></li>
-              <li><Link href="#reservation" className="hover:text-white transition">Reservations</Link></li>
-              <li><Link href="#location" className="hover:text-white transition">Location</Link></li>
+              <li><Link href="/" className="hover:text-white transition">Home</Link></li>
+              <li><Link href="/menu" className="hover:text-white transition">Menu</Link></li>
+              <li><Link href="/about" className="hover:text-white transition">About</Link></li>
+              <li><Link href="/reservation" className="hover:text-white transition">Reservations</Link></li>
+              <li><Link href="/contact" className="hover:text-white transition">Contact</Link></li>
             </ul>
           </div>
 

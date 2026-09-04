@@ -1,23 +1,17 @@
 import { Hero } from "@/components/Hero";
-import { About } from "@/components/About";
 import { MenuSection } from "@/components/MenuSection";
 import { Specials } from "@/components/Specials";
-import { Reservation } from "@/components/Reservation";
-import { Location } from "@/components/Location";
 import { Reviews } from "@/components/Reviews";
-import { Footer } from "@/components/Footer";
+import { About } from "@/components/About";
 
-export default function Home() {
+export default function HomePage() {
   return (
-    <main>
+    <>
       <Hero />
       <About />
-      <MenuSection />
       <Specials />
-      <Reservation />
-      <Location />
+      <MenuSection />
       <Reviews />
-      <Footer />
-    </main>
+    </>
   );
 }

@@ -1,38 +1,29 @@
 import type { Metadata } from "next";
-import { Inter, Playfair_Display, Geist } from "next/font/google";
+import { Inter, Playfair_Display } from "next/font/google";
 import "./globals.css";
 import { cn } from "@/lib/utils";
+import { Navbar } from "@/components/Navbar";
+import { Footer } from "@/components/Footer";
 
-const geist = Geist({subsets:['latin'],variable:'--font-sans'});
+const inter = Inter({ subsets: ["latin"], variable: "--font-sans" });
 const playfair = Playfair_Display({ subsets: ["latin"], variable: "--font-serif" });
 
 export const metadata: Metadata = {
   title: "Almast Turkish & Mediterranean Cuisine | Windsor",
-  description: "Authentic stone oven pide, premium kebabs & traditional Turkish breakfast in Windsor. Order online or reserve your table.",
-  keywords: "Turkish restaurant Windsor, Mediterranean food, kebab, pide, halal Windsor",
-  openGraph: {
-    title: "Almast Turkish Cuisine",
-    description: "Experience the finest Turkish & Mediterranean dishes in Windsor.",
-    url: "https://almastcuisine.com",
-    siteName: "Almast Cuisine",
-    locale: "en_CA",
-    type: "website",
-  },
+  description: "Authentic stone oven pide, premium kebabs & traditional Turkish breakfast in Windsor.",
 };
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className={cn("font-sans", geist.variable)}>
+    <html lang="en">
       <body className={cn(
         "min-h-screen bg-background font-sans antialiased",
-        geist.variable,
+        inter.variable,
         playfair.variable
       )}>
-        {children}
+        <Navbar />
+        <main className="pt-20">{children}</main>
+        <Footer />
       </body>
     </html>
   );
